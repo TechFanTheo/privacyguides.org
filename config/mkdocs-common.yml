@@ -88,6 +88,10 @@ theme:
     - navigation.expand
     - navigation.path
     - navigation.indexes
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.instant.preview
     - content.tabs.link
     - content.tooltips
     - search.highlight
