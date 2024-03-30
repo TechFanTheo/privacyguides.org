@@ -68,7 +68,7 @@ theme:
 
 markdown_extensions:
   pymdownx.snippets:
-    auto_append: 
+    auto_append:
       - includes/abbreviations.zh-Hant.txt
 
 nav:
@@ -101,6 +101,7 @@ nav:
       - 'tor.md'
       - 'desktop-browsers.md'
       - 'mobile-browsers.md'
+      - 'browser-extensions.md'
     - 提供者:
       - 'cloud.md'
       - 'dns.md'

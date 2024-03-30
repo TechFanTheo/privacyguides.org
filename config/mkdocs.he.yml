@@ -68,7 +68,7 @@ theme:
 
 markdown_extensions:
   pymdownx.snippets:
-    auto_append: 
+    auto_append:
       - includes/abbreviations.he.txt
 
 nav:
@@ -103,6 +103,7 @@ nav:
       - 'tor.md'
       - 'desktop-browsers.md'
       - 'mobile-browsers.md'
+      - 'browser-extensions.md'
     - "ספקים":
       - 'cloud.md'
       - 'dns.md'

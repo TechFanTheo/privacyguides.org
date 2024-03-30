@@ -101,6 +101,7 @@ nav:
       - 'tor.md'
       - 'desktop-browsers.md'
       - 'mobile-browsers.md'
+      - 'browser-extensions.md'
     - Providers:
       - 'cloud.md'
       - 'dns.md'
