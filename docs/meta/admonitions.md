@@ -1,5 +1,6 @@
 ---
 title: Admonitions
+description: A guide for website contributors on creating admonitions.
 ---
 
 **Admonitions** (or "call-outs") are a choice writers can use to include side content in an article without interrupting the document flow.
@@ -217,7 +218,7 @@ This is a special type of collapsible admonition, used to generate the download 
 - [:simple-googleplay: Google Play](https://play.google.com/store/apps/details?id=ch.protonmail.android)
 - [:simple-appstore: App Store](https://apps.apple.com/app/id979659905)
 - [:simple-github: GitHub](https://github.com/ProtonMail/proton-mail-android/releases)
-- [:simple-windows11: Windows](https://proton.me/mail/bridge#download)
+- [:fontawesome-brands-windows: Windows](https://proton.me/mail/bridge#download)
 - [:simple-apple: macOS](https://proton.me/mail/bridge#download)
 - [:simple-linux: Linux](https://proton.me/mail/bridge#download)
 - [:octicons-browser-16: Web](https://mail.proton.me)
@@ -233,7 +234,7 @@ This is a special type of collapsible admonition, used to generate the download 
 - [:simple-googleplay: Google Play](https://play.google.com/store/apps/details?id=ch.protonmail.android)
 - [:simple-appstore: App Store](https://apps.apple.com/app/id979659905)
 - [:simple-github: GitHub](https://github.com/ProtonMail/proton-mail-android/releases)
-- [:simple-windows11: Windows](https://proton.me/mail/bridge#download)
+- [:fontawesome-brands-windows: Windows](https://proton.me/mail/bridge#download)
 - [:simple-apple: macOS](https://proton.me/mail/bridge#download)
 - [:simple-linux: Linux](https://proton.me/mail/bridge#download)
 - [:octicons-browser-16: Web](https://mail.proton.me)

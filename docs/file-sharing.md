@@ -4,9 +4,15 @@ icon: material/share-variant
 description: Discover how to privately share your files between your devices, with your friends and family, or anonymously online.
 cover: file-sharing.webp
 ---
+<small>Protects against the following threat(s):</small>
+
+- [:material-server-network: Service Providers](basics/common-threats.md#privacy-from-service-providers){ .pg-teal }
+
 Discover how to privately share your files between your devices, with your friends and family, or anonymously online.
 
 ## File Sharing
+
+If you have already use [Proton Drive](cloud.md#proton-drive)[^1] or have a [Bitwarden](passwords.md#bitwarden) Premium[^2] subscription, consider using the file sharing capabilities that they each offer, both of which use end-to-end encryption. Otherwise, the standalone options listed here ensure that the files you share are not read by a remote server.
 
 ### Send
 
@@ -14,7 +20,7 @@ Discover how to privately share your files between your devices, with your frien
 
 ![Send logo](assets/img/file-sharing-sync/send.svg){ align=right }
 
-**Send** is a fork of Mozilla’s discontinued Firefox Send service which allows you to send files to others with a link. Files are encrypted on your device so that they cannot be read by the server, and they can be optionally password-protected as well. The maintainer of Send hosts a [public instance](https://send.vis.ee). You can use other public instances, or you can host Send yourself.
+**Send** is a fork of Mozilla's discontinued Firefox Send service which allows you to send files to others with a link. Files are encrypted on your device so that they cannot be read by the server, and they can be optionally password-protected as well. The maintainer of Send hosts a [public instance](https://send.vis.ee). You can use other public instances, or you can host Send yourself.
 
 [:octicons-home-16: Homepage](https://send.vis.ee){ .md-button .md-button--primary }
 [:octicons-server-16:](https://github.com/timvisee/send-instances){ .card-link title="Public Instances"}
@@ -38,7 +44,7 @@ ffsend upload --host https://send.vis.ee/ FILE
 
 ![OnionShare logo](assets/img/file-sharing-sync/onionshare.svg){ align=right }
 
-**OnionShare** is an open-source tool that lets you securely and anonymously share a file of any size. It works by starting a web server accessible as a Tor onion service, with an unguessable URL that you can share with the recipients to download or send files.
+**OnionShare** is an open-source tool that lets you securely and [:material-incognito: anonymously](basics/common-threats.md#anonymity-vs-privacy){ .pg-purple } share a file of any size. It works by starting a web server accessible as a Tor onion service, with an unguessable URL that you can share with the recipients to download or send files.
 
 [:octicons-home-16: Homepage](https://onionshare.org){ .md-button .md-button--primary }
 [:simple-torbrowser:](http://lldan5gahapx5k7iafb3s4ikijc4ni7gx5iywdflkba5y2ezyg6sjgyd.onion){ .card-link title="Onion Service" }
@@ -48,13 +54,15 @@ ffsend upload --host https://send.vis.ee/ FILE
 <details class="downloads" markdown>
 <summary>Downloads</summary>
 
-- [:simple-windows11: Windows](https://onionshare.org/#download)
+- [:fontawesome-brands-windows: Windows](https://onionshare.org/#download)
 - [:simple-apple: macOS](https://onionshare.org/#download)
 - [:simple-linux: Linux](https://onionshare.org/#download)
 
 </details>
 
 </div>
+
+OnionShare provides the option to connect via [Tor bridges](https://docs.onionshare.org/2.6.2/en/tor.html#automatic-censorship-circumvention) to circumvent [:material-close-outline: Censorship](basics/common-threats.md#avoiding-censorship){ .pg-blue-gray }.
 
 ### Criteria
 
@@ -87,7 +95,7 @@ ffsend upload --host https://send.vis.ee/ FILE
 
 <div class="admonition recommendation" markdown>
 
-![Nextcloud logo](assets/img/productivity/nextcloud.svg){ align=right }
+![Nextcloud logo](assets/img/document-collaboration/nextcloud.svg){ align=right }
 
 **Nextcloud** is a suite of free and open-source client-server software for creating your own file hosting services on a private server you control.
 
@@ -103,7 +111,7 @@ ffsend upload --host https://send.vis.ee/ FILE
 - [:simple-googleplay: Google Play](https://play.google.com/store/apps/details?id=com.nextcloud.client)
 - [:simple-appstore: App Store](https://apps.apple.com/app/id1125420102)
 - [:simple-github: GitHub](https://github.com/nextcloud/android/releases)
-- [:simple-windows11: Windows](https://nextcloud.com/install/#install-clients)
+- [:fontawesome-brands-windows: Windows](https://nextcloud.com/install/#install-clients)
 - [:simple-apple: macOS](https://nextcloud.com/install/#install-clients)
 - [:simple-linux: Linux](https://nextcloud.com/install/#install-clients)
 
@@ -134,8 +142,7 @@ We don't recommend using the [E2EE App](https://apps.nextcloud.com/apps/end_to_e
 <details class="downloads" markdown>
 <summary>Downloads</summary>
 
-- [:simple-googleplay: Google Play](https://play.google.com/store/apps/details?id=com.nutomic.syncthingandroid)
-- [:simple-windows11: Windows](https://syncthing.net/downloads)
+- [:fontawesome-brands-windows: Windows](https://syncthing.net/downloads)
 - [:simple-apple: macOS](https://syncthing.net/downloads)
 - [:simple-linux: Linux](https://syncthing.net/downloads)
 - [:simple-freebsd: FreeBSD](https://syncthing.net/downloads)
@@ -158,5 +165,8 @@ We don't recommend using the [E2EE App](https://apps.nextcloud.com/apps/end_to_e
 
 Our best-case criteria represents what we would like to see from the perfect project in this category. Our recommendations may not include any or all of this functionality, but those which do may rank higher than others on this page.
 
-- Has mobile clients for iOS and Android, which at least support document previews.
-- Supports photo backup from iOS and Android, and optionally supports file/folder sync on Android.
+- Should have mobile clients for iOS and Android which at least support document previews.
+- Should support photo backups from iOS and Android, and optionally support file/folder sync on Android.
+
+[^1]: Proton Drive allows you to [share files or folders](https://proton.me/support/drive-shareable-link) by generating a shareable public link or sending a unique link to a designated email address. Public links can be protected with a password, set to expire, and completely revoked, while links shared via email can have custom permissions and be similarly revoked. Per Proton Drive's [privacy policy](https://proton.me/drive/privacy-policy), file contents, file and folder names, and thumbnail previews are end-to-end encrypted.
+[^2]: With a [premium](https://bitwarden.com/help/about-bitwarden-plans/#compare-personal-plans) subscription, [Bitwarden Send](https://bitwarden.com/products/send) allows you to share files and text securely with [end-to-end encryption](https://bitwarden.com/help/send-encryption). A [password](https://bitwarden.com/help/send-privacy/#send-passwords) can be required along with the Send link. Bitwarden Send also features [automatic deletion](https://bitwarden.com/help/send-lifespan).

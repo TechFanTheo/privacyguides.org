@@ -5,25 +5,29 @@ icon: material/file-lock
 description: Encryption of data is the only way to control who can access it. These tools allow you to encrypt your emails and any other files.
 cover: encryption.webp
 ---
-Encryption of data is the only way to control who can access it. If you are currently not using encryption software for your hard disk, emails or files, you should pick an option here.
+**Encryption** is the only secure way to control who can access your data. If you are currently not using encryption software for your hard disk, emails, or files, you should pick an option here.
 
 ## Multi-platform
 
-The options listed here are multi-platform and great for creating encrypted backups of your data.
+The options listed here are available on multiple platforms and great for creating encrypted backups of your data.
 
 ### Cryptomator (Cloud)
+
+<small>Protects against the following threat(s):</small>
+
+- [:material-bug-outline: Passive Attacks](basics/common-threats.md#security-and-privacy){ .pg-orange }
 
 <div class="admonition recommendation" markdown>
 
 ![Cryptomator logo](assets/img/encryption-software/cryptomator.svg){ align=right }
 
-**Cryptomator** is an encryption solution designed for privately saving files to any cloud provider. It allows you to create vaults that are stored on a virtual drive, the contents of which are encrypted and synced with your cloud storage provider.
+**Cryptomator** is an encryption solution designed for privately saving files to any cloud [:material-server-network: Service Provider](basics/common-threats.md#privacy-from-service-providers){ .pg-teal }, eliminating the need to trust that they won't access your files. It allows you to create vaults that are stored on a virtual drive, the contents of which are encrypted and synced with your cloud storage provider.
 
 [:octicons-home-16: Homepage](https://cryptomator.org){ .md-button .md-button--primary }
 [:octicons-eye-16:](https://cryptomator.org/privacy){ .card-link title="Privacy Policy" }
-[:octicons-info-16:](https://docs.cryptomator.org){ .card-link title=Documentation}
+[:octicons-info-16:](https://docs.cryptomator.org){ .card-link title="Documentation" }
 [:octicons-code-16:](https://github.com/cryptomator){ .card-link title="Source Code" }
-[:octicons-heart-16:](https://cryptomator.org/donate){ .card-link title=Contribute }
+[:octicons-heart-16:](https://cryptomator.org/donate){ .card-link title="Contribute" }
 
 <details class="downloads" markdown>
 <summary>Downloads</summary>
@@ -31,7 +35,7 @@ The options listed here are multi-platform and great for creating encrypted back
 - [:simple-googleplay: Google Play](https://play.google.com/store/apps/details?id=org.cryptomator)
 - [:simple-appstore: App Store](https://apps.apple.com/app/id1560822163)
 - [:simple-android: Android](https://cryptomator.org/android)
-- [:simple-windows11: Windows](https://cryptomator.org/downloads)
+- [:fontawesome-brands-windows: Windows](https://cryptomator.org/downloads)
 - [:simple-apple: macOS](https://cryptomator.org/downloads)
 - [:simple-linux: Linux](https://cryptomator.org/downloads)
 - [:simple-flathub: Flathub](https://flathub.org/apps/details/org.cryptomator.Cryptomator)
@@ -48,28 +52,38 @@ Cryptomator's documentation details its intended [security target](https://docs.
 
 ### Picocrypt (File)
 
+<small>Protects against the following threat(s):</small>
+
+- [:material-target-account: Targeted Attacks](basics/common-threats.md#attacks-against-specific-individuals){ .pg-red }
+
 <div class="admonition recommendation" markdown>
 
 ![Picocrypt logo](assets/img/encryption-software/picocrypt.svg){ align=right }
 
 **Picocrypt** is a small and simple encryption tool that provides modern encryption. Picocrypt uses the secure XChaCha20 cipher and the Argon2id key derivation function to provide a high level of security. It uses Go's standard x/crypto modules for its encryption features.
 
-[:octicons-repo-16: Repository](https://github.com/HACKERALERT/Picocrypt){ .md-button .md-button--primary }
-[:octicons-code-16:](https://github.com/HACKERALERT/Picocrypt){ .card-link title="Source Code" }
-[:octicons-heart-16:](https://opencollective.com/picocrypt){ .card-link title=Contribute }
+[:octicons-repo-16: Repository](https://github.com/Picocrypt/Picocrypt){ .md-button .md-button--primary }
+[:octicons-code-16:](https://github.com/Picocrypt/Picocrypt){ .card-link title="Source Code" }
+[:octicons-heart-16:](https://opencollective.com/picocrypt){ .card-link title="Contribute" }
 
 <details class="downloads" markdown>
 <summary>Downloads</summary>
 
-- [:simple-windows11: Windows](https://github.com/HACKERALERT/Picocrypt/releases)
-- [:simple-apple: macOS](https://github.com/HACKERALERT/Picocrypt/releases)
-- [:simple-linux: Linux](https://github.com/HACKERALERT/Picocrypt/releases)
+- [:fontawesome-brands-windows: Windows](https://github.com/Picocrypt/Picocrypt/releases)
+- [:simple-apple: macOS](https://github.com/Picocrypt/Picocrypt/releases)
+- [:simple-linux: Linux](https://github.com/Picocrypt/Picocrypt/releases)
 
 </details>
 
 </div>
 
+Picocrypt has been [audited](https://github.com/Picocrypt/storage/blob/main/Picocrypt.Audit.Report.pdf) by Radically Open Security in August 2024, and [most](https://github.com/Picocrypt/Picocrypt/issues/32#issuecomment-2329722740) of the issues found in the audit were subsequently fixed.
+
 ### VeraCrypt (Disk)
+
+<small>Protects against the following threat(s):</small>
+
+- [:material-target-account: Targeted Attacks](basics/common-threats.md#attacks-against-specific-individuals){ .pg-red }
 
 <div class="admonition recommendation" markdown>
 
@@ -79,14 +93,14 @@ Cryptomator's documentation details its intended [security target](https://docs.
 **VeraCrypt** is a source-available freeware utility used for on-the-fly encryption. It can create a virtual encrypted disk within a file, encrypt a partition, or encrypt the entire storage device with pre-boot authentication.
 
 [:octicons-home-16: Homepage](https://veracrypt.fr){ .md-button .md-button--primary }
-[:octicons-info-16:](https://veracrypt.fr/en/Documentation.html){ .card-link title=Documentation}
+[:octicons-info-16:](https://veracrypt.fr/en/Documentation.html){ .card-link title="Documentation" }
 [:octicons-code-16:](https://veracrypt.fr/code){ .card-link title="Source Code" }
-[:octicons-heart-16:](https://veracrypt.fr/en/Donation.html){ .card-link title=Contribute }
+[:octicons-heart-16:](https://veracrypt.fr/en/Donation.html){ .card-link title="Contribute" }
 
 <details class="downloads" markdown>
 <summary>Downloads</summary>
 
-- [:simple-windows11: Windows](https://veracrypt.fr/en/Downloads.html)
+- [:fontawesome-brands-windows: Windows](https://veracrypt.fr/en/Downloads.html)
 - [:simple-apple: macOS](https://veracrypt.fr/en/Downloads.html)
 - [:simple-linux: Linux](https://veracrypt.fr/en/Downloads.html)
 
@@ -100,9 +114,13 @@ When encrypting with VeraCrypt, you have the option to select from different [ha
 
 Truecrypt has been [audited a number of times](https://en.wikipedia.org/wiki/TrueCrypt#Security_audits), and VeraCrypt has also been [audited separately](https://en.wikipedia.org/wiki/VeraCrypt#VeraCrypt_audit).
 
-## OS Full Disk Encryption
+## Operating System Encryption
 
-For encrypting the drive your operating system boots from, we generally recommend enabling the encryption software that comes with your operating system rather than using a third-party tool. This is because your operating system's native encryption tools often make use of OS and hardware-specific features like the [secure cryptoprocessor](https://en.wikipedia.org/wiki/Secure_cryptoprocessor) in your device to protect your computer against more advanced physical attacks. For secondary drives and external drives which you *don't* boot from, we still recommend using open-source tools like [VeraCrypt](#veracrypt-disk) over the tools below, because they offer additional flexibility and let you avoid vendor lock-in.
+<small>Protects against the following threat(s):</small>
+
+- [:material-target-account: Targeted Attacks](basics/common-threats.md#attacks-against-specific-individuals){ .pg-red }
+
+Built-in OS encryption solutions generally leverage hardware security features such as a [secure cryptoprocessor](basics/hardware.md#tpmsecure-cryptoprocessor). Therefore, we recommend using the built-in encryption solutions for your operating system. For cross-platform encryption, we still recommend [cross-platform tools](#multi-platform) for additional flexibility and to avoid vendor lock-in.
 
 ### BitLocker
 
@@ -110,15 +128,15 @@ For encrypting the drive your operating system boots from, we generally recommen
 
 ![BitLocker logo](assets/img/encryption-software/bitlocker.png){ align=right }
 
-**BitLocker** is the full volume encryption solution bundled with Microsoft Windows. The main reason we recommend it for encrypting your boot drive is because of its [use of TPM](https://learn.microsoft.com/windows/security/information-protection/tpm/how-windows-uses-the-tpm). ElcomSoft, a forensics company, has written about this feature in [Understanding BitLocker TPM Protection](https://blog.elcomsoft.com/2021/01/understanding-BitLocker-tpm-protection).
+**BitLocker** is the full volume encryption solution bundled with Microsoft Windows that uses the Trusted Platform Module ([TPM](https://learn.microsoft.com/windows/security/information-protection/tpm/how-windows-uses-the-tpm)) for hardware-based security.
 
-[:octicons-info-16:](https://learn.microsoft.com/windows/security/information-protection/BitLocker/BitLocker-overview){ .card-link title=Documentation}
+[:octicons-info-16:](https://learn.microsoft.com/windows/security/information-protection/BitLocker/BitLocker-overview){ .card-link title="Documentation" }
 
 </details>
 
 </div>
 
-BitLocker is [only supported](https://support.microsoft.com/windows/turn-on-device-encryption-0c453637-bc88-5f74-5105-741561aae838) on Pro, Enterprise and Education editions of Windows. It can be enabled on Home editions provided that they meet the prerequisites.
+BitLocker is [officially supported](https://support.microsoft.com/windows/turn-on-device-encryption-0c453637-bc88-5f74-5105-741561aae838) on the Pro, Enterprise, and Education editions of Windows. It can be enabled on Home editions provided that they meet the following prerequisites.
 
 <details class="example" markdown>
 <summary>Enabling BitLocker on Windows Home</summary>
@@ -126,28 +144,32 @@ BitLocker is [only supported](https://support.microsoft.com/windows/turn-on-devi
 To enable BitLocker on "Home" editions of Windows, you must have partitions formatted with a [GUID Partition Table](https://en.wikipedia.org/wiki/GUID_Partition_Table) and have a dedicated TPM (v1.2, 2.0+) module. You may need to [disable the non-Bitlocker "Device encryption" functionality](https://discuss.privacyguides.net/t/enabling-bitlocker-on-the-windows-11-home-edition/13303/5) (which is inferior because it sends your recovery key to Microsoft's servers) if it is enabled on your device already before following this guide.
 
 1. Open a command prompt and check your drive's partition table format with the following command. You should see "**GPT**" listed under "Partition Style":
-   ```powershell
-   powershell Get-Disk
-   ```
+
+    ```powershell
+    powershell Get-Disk
+    ```
 
 2. Run this command (in an admin command prompt) to check your TPM version. You should see `2.0` or `1.2` listed next to `SpecVersion`:
-   ```powershell
-   powershell Get-WmiObject -Namespace "root/cimv2/security/microsofttpm" -Class WIN32_tpm
-   ```
+
+    ```powershell
+    powershell Get-WmiObject -Namespace "root/cimv2/security/microsofttpm" -Class WIN32_tpm
+    ```
 
 3. Access [Advanced Startup Options](https://support.microsoft.com/windows/advanced-startup-options-including-safe-mode-b90e7808-80b5-a291-d4b8-1a1af602b617). You need to reboot while pressing the F8 key before Windows starts and go into the *command prompt* in **Troubleshoot** → **Advanced Options** → **Command Prompt**.
 4. Login with your admin account and type this in the command prompt to start encryption:
-   ```powershell
-   manage-bde -on c: -used
-   ```
+
+    ```powershell
+    manage-bde -on c: -used
+    ```
 
 5. Close the command prompt and continue booting to regular Windows.
 6. Open an admin command prompt and run the following commands:
-   ```powershell
-   manage-bde c: -protectors -add -rp -tpm
-   manage-bde -protectors -enable c:
-   manage-bde -protectors -get c: > %UserProfile%\Desktop\BitLocker-Recovery-Key.txt
-   ```
+
+    ```powershell
+    manage-bde c: -protectors -add -rp -tpm
+    manage-bde -protectors -enable c:
+    manage-bde -protectors -get c: > %UserProfile%\Desktop\BitLocker-Recovery-Key.txt
+    ```
 
 <div class="admonition tip" markdown>
 <p class="admonition-title">Tip</p>
@@ -164,15 +186,15 @@ Backup `BitLocker-Recovery-Key.txt` on your Desktop to a separate storage device
 
 ![FileVault logo](assets/img/encryption-software/filevault.png){ align=right }
 
-**FileVault** is the on-the-fly volume encryption solution built into macOS. FileVault is recommended because it [leverages](https://support.apple.com/guide/security/volume-encryption-with-filevault-sec4c6dc1b6e/web) hardware security capabilities present on an Apple silicon SoC or T2 Security Chip.
+**FileVault** is the on-the-fly volume encryption solution built into macOS. FileVault takes advantage of the [hardware security capabilities](os/macos-overview.md#hardware-security) present on an Apple silicon SoC or T2 Security Chip.
 
-[:octicons-info-16:](https://support.apple.com/guide/mac-help/encrypt-mac-data-with-filevault-mh11785/mac){ .card-link title=Documentation}
+[:octicons-info-16:](https://support.apple.com/guide/mac-help/encrypt-mac-data-with-filevault-mh11785/mac){ .card-link title="Documentation" }
 
 </details>
 
 </div>
 
-We recommend storing a local recovery key in a secure place as opposed to using your iCloud account for recovery.
+We advise against using your iCloud account for recovery; instead, you should securely store a local recovery key on a separate storage device.
 
 ### Linux Unified Key Setup
 
@@ -183,7 +205,7 @@ We recommend storing a local recovery key in a secure place as opposed to using 
 **LUKS** is the default FDE method for Linux. It can be used to encrypt full volumes, partitions, or create encrypted containers.
 
 [:octicons-home-16: Homepage](https://gitlab.com/cryptsetup/cryptsetup/-/blob/main/README.md){ .md-button .md-button--primary }
-[:octicons-info-16:](https://gitlab.com/cryptsetup/cryptsetup/-/wikis/home){ .card-link title=Documentation}
+[:octicons-info-16:](https://gitlab.com/cryptsetup/cryptsetup/-/wikis/home){ .card-link title="Documentation" }
 [:octicons-code-16:](https://gitlab.com/cryptsetup/cryptsetup){ .card-link title="Source Code" }
 
 </details>
@@ -222,6 +244,10 @@ cryptsetup luksHeaderBackup /dev/device --header-backup-file /mnt/backup/file.im
 
 ## Command-line
 
+<small>Protects against the following threat(s):</small>
+
+- [:material-target-account: Targeted Attacks](basics/common-threats.md#attacks-against-specific-individuals){ .pg-red }
+
 Tools with command-line interfaces are useful for integrating [shell scripts](https://en.wikipedia.org/wiki/Shell_script).
 
 ### Kryptor
@@ -234,14 +260,14 @@ Tools with command-line interfaces are useful for integrating [shell scripts](ht
 
 [:octicons-home-16: Homepage](https://kryptor.co.uk){ .md-button .md-button--primary }
 [:octicons-eye-16:](https://kryptor.co.uk/features#privacy){ .card-link title="Privacy Policy" }
-[:octicons-info-16:](https://kryptor.co.uk/tutorial){ .card-link title=Documentation}
+[:octicons-info-16:](https://kryptor.co.uk/tutorial){ .card-link title="Documentation" }
 [:octicons-code-16:](https://github.com/samuel-lucas6/Kryptor){ .card-link title="Source Code" }
-[:octicons-heart-16:](https://kryptor.co.uk/#donate){ .card-link title=Contribute }
+[:octicons-heart-16:](https://kryptor.co.uk/#donate){ .card-link title="Contribute" }
 
 <details class="downloads" markdown>
 <summary>Downloads</summary>
 
-- [:simple-windows11: Windows](https://kryptor.co.uk)
+- [:fontawesome-brands-windows: Windows](https://kryptor.co.uk)
 - [:simple-apple: macOS](https://kryptor.co.uk)
 - [:simple-linux: Linux](https://kryptor.co.uk)
 
@@ -255,18 +281,24 @@ Tools with command-line interfaces are useful for integrating [shell scripts](ht
 
 ![Tomb logo](assets/img/encryption-software/tomb.png){ align=right }
 
-**Tomb** is a command-line shell wrapper for LUKS. It supports steganography via [third-party tools](https://github.com/dyne/Tomb#how-does-it-work).
+**Tomb** is a command-line shell wrapper for LUKS. It supports steganography via [third-party tools](https://dyne.org/software/tomb/#advanced-usage).
 
 [:octicons-home-16: Homepage](https://dyne.org/software/tomb){ .md-button .md-button--primary }
-[:octicons-info-16:](https://github.com/dyne/Tomb/wiki){ .card-link title=Documentation}
+[:octicons-info-16:](https://github.com/dyne/Tomb/wiki){ .card-link title="Documentation" }
 [:octicons-code-16:](https://github.com/dyne/Tomb){ .card-link title="Source Code" }
-[:octicons-heart-16:](https://dyne.org/donate){ .card-link title=Contribute }
+[:octicons-heart-16:](https://dyne.org/donate){ .card-link title="Contribute" }
 
 </details>
 
 </div>
 
 ## OpenPGP
+
+<small>Protects against the following threat(s):</small>
+
+- [:material-target-account: Targeted Attacks](basics/common-threats.md#attacks-against-specific-individuals){ .pg-red }
+- [:material-bug-outline: Passive Attacks](basics/common-threats.md#security-and-privacy){ .pg-orange }
+- [:material-server-network: Service Providers](basics/common-threats.md#privacy-from-service-providers){ .pg-teal }
 
 OpenPGP is sometimes needed for specific tasks such as digitally signing and encrypting email. PGP has many features and is [complex](https://latacora.micro.blog/2019/07/16/the-pgp-problem.html) as it has been around a long time. For tasks such as signing or encrypting files, we suggest the above options.
 
@@ -293,14 +325,14 @@ gpg --quick-gen-key alice@example.com future-default
 
 [:octicons-home-16: Homepage](https://gnupg.org){ .md-button .md-button--primary }
 [:octicons-eye-16:](https://gnupg.org/privacy-policy.html){ .card-link title="Privacy Policy" }
-[:octicons-info-16:](https://gnupg.org/documentation/index.html){ .card-link title=Documentation}
+[:octicons-info-16:](https://gnupg.org/documentation/index.html){ .card-link title="Documentation" }
 [:octicons-code-16:](https://git.gnupg.org/cgi-bin/gitweb.cgi?p=gnupg.git){ .card-link title="Source Code" }
 
 <details class="downloads" markdown>
 <summary>Downloads</summary>
 
 - [:simple-googleplay: Google Play](https://play.google.com/store/apps/details?id=org.sufficientlysecure.keychain)
-- [:simple-windows11: Windows](https://gpg4win.org/download.html)
+- [:fontawesome-brands-windows: Windows](https://gpg4win.org/download.html)
 - [:simple-apple: macOS](https://gpgtools.org)
 - [:simple-linux: Linux](https://gnupg.org/download/index.html#binary)
 
@@ -318,14 +350,14 @@ gpg --quick-gen-key alice@example.com future-default
 
 [:octicons-home-16: Homepage](https://gpg4win.org){ .md-button .md-button--primary }
 [:octicons-eye-16:](https://gpg4win.org/privacy-policy.html){ .card-link title="Privacy Policy" }
-[:octicons-info-16:](https://gpg4win.org/documentation.html){ .card-link title=Documentation}
+[:octicons-info-16:](https://gpg4win.org/documentation.html){ .card-link title="Documentation" }
 [:octicons-code-16:](https://git.gnupg.org/cgi-bin/gitweb.cgi?p=gpg4win.git;a=summary){ .card-link title="Source Code" }
-[:octicons-heart-16:](https://gpg4win.org/donate.html){ .card-link title=Contribute }
+[:octicons-heart-16:](https://gpg4win.org/donate.html){ .card-link title="Contribute" }
 
 <details class="downloads" markdown>
 <summary>Downloads</summary>
 
-- [:simple-windows11: Windows](https://gpg4win.org/download.html)
+- [:fontawesome-brands-windows: Windows](https://gpg4win.org/download.html)
 
 </details>
 
@@ -336,7 +368,7 @@ gpg --quick-gen-key alice@example.com future-default
 <div class="admonition note" markdown>
 <p class="admonition-title">Note</p>
 
-We suggest [Canary Mail](email-clients.md#canary-mail) for using PGP with email on iOS devices.
+We suggest [Canary Mail](email-clients.md#canary-mail-ios) for using PGP with email on iOS devices.
 
 </div>
 
@@ -344,13 +376,13 @@ We suggest [Canary Mail](email-clients.md#canary-mail) for using PGP with email 
 
 ![GPG Suite logo](assets/img/encryption-software/gpgsuite.png){ align=right }
 
-**GPG Suite** provides OpenPGP support for [Apple Mail](email-clients.md#apple-mail) and macOS.
+**GPG Suite** provides OpenPGP support for [Apple Mail](email-clients.md#apple-mail-macos) and other email clients on macOS.
 
-We recommend taking a look at their [First steps](https://gpgtools.tenderapp.com/kb/how-to/first-steps-where-do-i-start-where-do-i-begin-setup-gpgtools-create-a-new-key-your-first-encrypted-email) and [Knowledge base](https://gpgtools.tenderapp.com/kb) for support.
+We recommend taking a look at their [First steps](https://gpgtools.tenderapp.com/kb/how-to/first-steps-where-do-i-start-where-do-i-begin-setup-gpgtools-create-a-new-key-your-first-encrypted-email) and [Knowledge Base](https://gpgtools.tenderapp.com/kb) for support.
 
 [:octicons-home-16: Homepage](https://gpgtools.org){ .md-button .md-button--primary }
 [:octicons-eye-16:](https://gpgtools.org/privacy){ .card-link title="Privacy Policy" }
-[:octicons-info-16:](https://gpgtools.tenderapp.com/kb){ .card-link title=Documentation}
+[:octicons-info-16:](https://gpgtools.tenderapp.com/kb){ .card-link title="Documentation" }
 [:octicons-code-16:](https://github.com/GPGTools){ .card-link title="Source Code" }
 
 <details class="downloads" markdown>
@@ -362,17 +394,19 @@ We recommend taking a look at their [First steps](https://gpgtools.tenderapp.com
 
 </div>
 
+Currently, GPG Suite does [not yet](https://gpgtools.com/sequoia) have a stable release for macOS Sonoma and later.
+
 ### OpenKeychain
 
 <div class="admonition recommendation" markdown>
 
 ![OpenKeychain logo](assets/img/encryption-software/openkeychain.svg){ align=right }
 
-**OpenKeychain** is an Android implementation of GnuPG. It's commonly required by mail clients such as [K-9 Mail](email-clients.md#k-9-mail) and [FairEmail](email-clients.md#fairemail) and other Android apps to provide encryption support. Cure53 completed a [security audit](https://openkeychain.org/openkeychain-3-6) of OpenKeychain 3.6 in October 2015. Technical details about the audit and OpenKeychain's solutions can be found [here](https://github.com/open-keychain/open-keychain/wiki/cure53-Security-Audit-2015).
+**OpenKeychain** is an implementation of GnuPG for Android. It's commonly required by mail clients such as [Thunderbird](email-clients.md#thunderbird), [FairEmail](email-clients.md#fairemail-android), and other Android apps to provide encryption support.
 
 [:octicons-home-16: Homepage](https://openkeychain.org){ .md-button .md-button--primary }
 [:octicons-eye-16:](https://openkeychain.org/help/privacy-policy){ .card-link title="Privacy Policy" }
-[:octicons-info-16:](https://openkeychain.org/faq){ .card-link title=Documentation}
+[:octicons-info-16:](https://openkeychain.org/faq){ .card-link title="Documentation" }
 [:octicons-code-16:](https://github.com/open-keychain/open-keychain){ .card-link title="Source Code" }
 
 <details class="downloads" markdown>
@@ -383,6 +417,8 @@ We recommend taking a look at their [First steps](https://gpgtools.tenderapp.com
 </details>
 
 </div>
+
+Cure53 completed a [security audit](https://openkeychain.org/openkeychain-3-6) of OpenKeychain 3.6 in October 2015. The published audit and OpenKeychain's solutions to the issues raised in the audit can be found [here](https://github.com/open-keychain/open-keychain/wiki/cure53-Security-Audit-2015).
 
 ## Criteria
 

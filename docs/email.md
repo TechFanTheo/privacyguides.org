@@ -4,16 +4,26 @@ title: "Email Services"
 icon: material/email
 description: These email providers offer a great place to store your emails securely, and many offer interoperable OpenPGP encryption with other providers.
 cover: email.webp
+global:
+ - [randomize-element, "table tbody"]
 ---
+<small>Protects against the following threat(s):</small>
+
+- [:material-server-network: Service Providers](basics/common-threats.md#privacy-from-service-providers){ .pg-teal }
+
 Email is practically a necessity for using any online service, however we do not recommend it for person-to-person conversations. Rather than using email to contact other people, consider using an instant messaging medium that supports forward secrecy.
 
 [Recommended Instant Messengers](real-time-communication.md){ .md-button }
 
-For everything else, we recommend a variety of email providers based on sustainable business models and built-in security and privacy features.
+## Recommended Providers
 
-- [OpenPGP-Compatible Email Providers :material-arrow-right-drop-circle:](#openpgp-compatible-services)
-- [Other Encrypted Providers :material-arrow-right-drop-circle:](#more-providers)
-- [Self-Hosted Options :material-arrow-right-drop-circle:](#self-hosting-email)
+For everything else, we recommend a variety of email providers based on sustainable business models and built-in security and privacy features. Read our [full list of criteria](#criteria) for more information.
+
+| Provider | OpenPGP / WKD | IMAP / SMTP | Zero Access Encryption | Anonymous Payments |
+|---|---|---|---|---|
+| [Proton Mail](#proton-mail) | :material-check:{ .pg-green } | :material-information-outline:{ .pg-blue } Paid plans only | :material-check:{ .pg-green } | Cash |
+| [Mailbox.org](#mailboxorg) | :material-check:{ .pg-green } | :material-check:{ .pg-green } | :material-information-outline:{ .pg-blue } Mail only | Cash |
+| [Tuta](#tuta) | :material-alert-outline:{ .pg-orange } | :material-alert-outline:{ .pg-orange } | :material-check:{ .pg-green } | Monero & Cash via third-party |
 
 In addition to (or instead of) an email provider recommended here, you may wish to consider a dedicated [email aliasing service](email-aliasing.md) to protect your privacy. Among other things, these services can help protect your real inbox from spam, prevent marketers from correlating your accounts, and encrypt all incoming messages with PGP.
 
@@ -45,12 +55,12 @@ OpenPGP also does not support Forward secrecy, which means if either your or the
 
 ![Proton Mail logo](assets/img/email/protonmail.svg){ align=right }
 
-**Proton Mail** is an email service with a focus on privacy, encryption, security, and ease of use. They have been in operation since **2013**. Proton AG is based in Genève, Switzerland. Accounts start with 500 MB storage with their free plan.
+**Proton Mail** is an email service with a focus on privacy, encryption, security, and ease of use. They have been in operation since 2013. Proton AG is based in Genève, Switzerland. The Proton Mail Free plan comes with 500MB of Mail storage, which you can increase up to 1GB for free.
 
 [:octicons-home-16: Homepage](https://proton.me/mail){ .md-button .md-button--primary }
 [:simple-torbrowser:](https://protonmailrmez3lotccipshtkleegetolb73fuirgj7r4o4vfu7ozyd.onion){ .card-link title="Onion Service" }
-[:octicons-eye-16:](https://proton.me/legal/privacy){ .card-link title="Privacy Policy" }
-[:octicons-info-16:](https://proton.me/support/mail){ .card-link title=Documentation}
+[:octicons-eye-16:](https://proton.me/mail/privacy-policy){ .card-link title="Privacy Policy" }
+[:octicons-info-16:](https://proton.me/support/mail){ .card-link title="Documentation" }
 [:octicons-code-16:](https://github.com/ProtonMail){ .card-link title="Source Code" }
 
 <details class="downloads" markdown>
@@ -58,8 +68,8 @@ OpenPGP also does not support Forward secrecy, which means if either your or the
 
 - [:simple-googleplay: Google Play](https://play.google.com/store/apps/details?id=ch.protonmail.android)
 - [:simple-appstore: App Store](https://apps.apple.com/app/id979659905)
-- [:simple-github: GitHub](https://github.com/ProtonMail/proton-mail-android/releases)
-- [:simple-windows11: Windows](https://proton.me/mail/bridge#download)
+- [:simple-github: GitHub](https://github.com/ProtonMail/android-mail/releases)
+- [:fontawesome-brands-windows: Windows](https://proton.me/mail/bridge#download)
 - [:simple-apple: macOS](https://proton.me/mail/bridge#download)
 - [:simple-linux: Linux](https://proton.me/mail/bridge#download)
 - [:octicons-browser-16: Web](https://mail.proton.me)
@@ -70,9 +80,9 @@ OpenPGP also does not support Forward secrecy, which means if either your or the
 
 Free accounts have some limitations, such as not being able to search body text and not having access to [Proton Mail Bridge](https://proton.me/mail/bridge), which is required to use a [recommended desktop email client](email-clients.md) (e.g. Thunderbird). Paid accounts include features like Proton Mail Bridge, additional storage, and custom domain support. A [letter of attestation](https://proton.me/blog/security-audit-all-proton-apps) was provided for Proton Mail's apps on 9th November 2021 by [Securitum](https://research.securitum.com).
 
-If you have the Proton Unlimited, Business, or Visionary Plan, you also get [SimpleLogin](#simplelogin) Premium for free.
+If you have the Proton Unlimited plan or any multi-user Proton plan, you also get [SimpleLogin](email-aliasing.md#simplelogin) Premium for free.
 
-Proton Mail has internal crash reports that they **do not** share with third parties. This can be disabled in: **Settings** > **Go to Settings** > **Account** > **Security and privacy** > **Send crash reports**.
+Proton Mail has internal crash reports that are **not** shared with third parties. This can be disabled in the web app: :gear: → **All Settings** → **Account** → **Security and privacy** → **Privacy and data collection**.
 
 #### :material-check:{ .pg-green } Custom Domains and Aliases
 
@@ -100,11 +110,11 @@ Proton Mail also publishes the public keys of Proton accounts via HTTP from thei
 
 #### :material-information-outline:{ .pg-blue } Account Termination
 
-If you have a paid account and your [bill is unpaid](https://proton.me/support/delinquency) after 14 days, you won't be able to access your data. After 30 days, your account will become delinquent and won't receive incoming mail. You will continue to be billed during this period.
+If you have a paid account and your [bill is unpaid](https://proton.me/support/delinquency) after 14 days, you won't be able to access your data. After 30 days, your account will become delinquent and won't receive incoming mail. You will continue to be billed during this period. Proton will [delete inactive free accounts](https://proton.me/support/inactive-accounts) after one year. You **cannot** reuse the email address of a deactivated account.
 
 #### :material-information-outline:{ .pg-blue } Additional Functionality
 
-Proton Mail offers an "Unlimited" account for €9.99/Month, which also enables access to Proton VPN in addition to providing multiple accounts, domains, aliases, and 500GB of storage.
+Proton Mail's [Unlimited](https://proton.me/support/proton-plans#proton-unlimited) plan also enables access to other Proton services in addition to providing multiple custom domains, unlimited hide-my-email aliases, and 500GB of storage.
 
 Proton Mail doesn't offer a digital legacy feature.
 
@@ -114,11 +124,11 @@ Proton Mail doesn't offer a digital legacy feature.
 
 ![Mailbox.org logo](assets/img/email/mailboxorg.svg){ align=right }
 
-**Mailbox.org** is an email service with a focus on being secure, ad-free, and privately powered by 100% eco-friendly energy. They have been in operation since 2014. Mailbox.org is based in Berlin, Germany. Accounts start with 2 GB of storage, which can be upgraded as needed.
+**Mailbox.org** is an email service with a focus on being secure, ad-free, and privately powered by 100% eco-friendly energy. They have been in operation since 2014. Mailbox.org is based in Berlin, Germany. Accounts start with up to 2GB storage, which can be upgraded as needed.
 
 [:octicons-home-16: Homepage](https://mailbox.org){ .md-button .md-button--primary }
 [:octicons-eye-16:](https://mailbox.org/en/data-protection-privacy-policy){ .card-link title="Privacy Policy" }
-[:octicons-info-16:](https://kb.mailbox.org/en/private){ .card-link title=Documentation}
+[:octicons-info-16:](https://kb.mailbox.org/en/private){ .card-link title="Documentation" }
 
 <details class="downloads" markdown>
 <summary>Downloads</summary>
@@ -135,7 +145,7 @@ Mailbox.org lets you use your own domain, and they support [catch-all](https://k
 
 #### :material-check:{ .pg-green } Private Payment Methods
 
-Mailbox.org doesn't accept any cryptocurrencies as a result of their payment processor BitPay suspending operations in Germany. However, they do accept Cash by mail, cash payment to bank account, bank transfer, credit card, PayPal and couple of German-specific processors: paydirekt and Sofortüberweisung.
+Mailbox.org doesn't accept any cryptocurrencies as a result of their payment processor BitPay suspending operations in Germany. However, they do accept cash by mail, cash payment to bank account, bank transfer, credit card, PayPal and couple of German-specific processors: paydirekt and Sofortüberweisung.
 
 #### :material-check:{ .pg-green } Account Security
 
@@ -155,7 +165,7 @@ Mailbox.org also supports the discovery of public keys via HTTP from their [Web 
 
 #### :material-information-outline:{ .pg-blue } Account Termination
 
-Your account will be set to a restricted user account when your contract ends, after [30 days it will be irrevocably deleted](https://kb.mailbox.org/en/private/payment-article/what-happens-at-the-end-of-my-contract).
+Your account will be set to a restricted user account when your contract ends. It will be irrevocably deleted after [30 days](https://kb.mailbox.org/en/private/payment-article/what-happens-at-the-end-of-my-contract).
 
 #### :material-information-outline:{ .pg-blue } Additional Functionality
 
@@ -171,7 +181,7 @@ These providers store your emails with zero-knowledge encryption, making them gr
 
 <div class="grid cards" markdown>
 
-- ![Tuta logo](assets/img/email/tuta.svg){ .twemoji } [Tuta](email.md#tuta)
+- ![Tuta logo](assets/img/email/tuta.svg#only-light){ .twemoji loading=lazy }![Tuta logo](assets/img/email/tuta-dark.svg#only-dark){ .twemoji loading=lazy } [Tuta](email.md#tuta)
 
 </div>
 
@@ -179,15 +189,16 @@ These providers store your emails with zero-knowledge encryption, making them gr
 
 <div class="admonition recommendation" markdown>
 
-![Tuta logo](assets/img/email/tuta.svg){ align=right }
+![Tuta logo](assets/img/email/tuta.svg#only-light){ align=right }
+![Tuta logo](assets/img/email/tuta-dark.svg#only-dark){ align=right }
 
-**Tuta** is an email service with a focus on security and privacy through the use of encryption. Tuta has been in operation since **2011** and is based in Hanover, Germany. Accounts start with 1GB storage with their free plan.
+**Tuta** (formerly *Tutanota*) is an email service with a focus on security and privacy through the use of encryption. Tuta has been in operation since 2011 and is based in Hanover, Germany. Free accounts start with 1GB of storage.
 
 [:octicons-home-16: Homepage](https://tuta.com){ .md-button .md-button--primary }
 [:octicons-eye-16:](https://tuta.com/privacy){ .card-link title="Privacy Policy" }
-[:octicons-info-16:](https://tuta.com/faq){ .card-link title=Documentation}
+[:octicons-info-16:](https://tuta.com/support){ .card-link title="Documentation" }
 [:octicons-code-16:](https://github.com/tutao/tutanota){ .card-link title="Source Code" }
-[:octicons-heart-16:](https://tuta.com/community){ .card-link title=Contribute }
+[:octicons-heart-16:](https://tuta.com/community){ .card-link title="Contribute" }
 
 <details class="downloads" markdown>
 <summary>Downloads</summary>
@@ -195,7 +206,7 @@ These providers store your emails with zero-knowledge encryption, making them gr
 - [:simple-googleplay: Google Play](https://play.google.com/store/apps/details?id=de.tutao.tutanota)
 - [:simple-appstore: App Store](https://apps.apple.com/app/id922429609)
 - [:simple-github: GitHub](https://github.com/tutao/tutanota/releases)
-- [:simple-windows11: Windows](https://tuta.com/#download)
+- [:fontawesome-brands-windows: Windows](https://tuta.com/#download)
 - [:simple-apple: macOS](https://tuta.com/#download)
 - [:simple-linux: Linux](https://tuta.com/#download)
 - [:octicons-browser-16: Web](https://app.tuta.com)
@@ -204,23 +215,23 @@ These providers store your emails with zero-knowledge encryption, making them gr
 
 </div>
 
-Tuta doesn't support the [IMAP protocol](https://tuta.com/faq/#imap) or the use of third-party [email clients](email-clients.md), and you also won't be able to add [external email accounts](https://github.com/tutao/tutanota/issues/544#issuecomment-670473647) to the Tuta app. [Email import](https://github.com/tutao/tutanota/issues/630) is not currently supported either, though this is [due to be changed](https://tuta.com/blog/posts/kickoff-import). Emails can be exported [individually or by bulk selection](https://tuta.com/howto#generalMail) per folder, which may be inconvenient if you have many folders.
+Tuta doesn't support the [IMAP protocol](https://tuta.com/support#imap) or the use of third-party [email clients](email-clients.md), and you also won't be able to add [external email accounts](https://github.com/tutao/tutanota/issues/544#issuecomment-670473647) to the Tuta app. [Email import](https://github.com/tutao/tutanota/issues/630) is not currently supported either, though this is [due to be changed](https://tuta.com/blog/kickoff-import). Emails can be exported [individually or by bulk selection](https://tuta.com/support#generalMail) per folder, which may be inconvenient if you have many folders.
 
 #### :material-check:{ .pg-green } Custom Domains and Aliases
 
-Paid Tuta accounts can use either 15 or 30 aliases depending on their plan and unlimited aliases on [custom domains](https://tuta.com/faq#custom-domain). Tuta doesn't allow for [sub-addressing (plus addresses)](https://tuta.com/faq#plus), but you can use a [catch-all](https://tuta.com/howto#settings-global) with a custom domain.
+Paid Tuta accounts can use either 15 or 30 aliases depending on their plan and unlimited aliases on [custom domains](https://tuta.com/support#custom-domain). Tuta doesn't allow for [sub-addressing (plus addresses)](https://tuta.com/support#plus), but you can use a [catch-all](https://tuta.com/support#settings-global) with a custom domain.
 
 #### :material-information-outline:{ .pg-blue } Private Payment Methods
 
-Tuta only directly accepts credit cards and PayPal, however [cryptocurrency](cryptocurrency.md) can be used to purchase gift cards via their [partnership](https://tuta.com/faq/#cryptocurrency) with Proxystore.
+Tuta only directly accepts credit cards and PayPal, however [cryptocurrency](cryptocurrency.md) can be used to purchase gift cards via their [partnership](https://tuta.com/support/#cryptocurrency) with Proxystore.
 
 #### :material-check:{ .pg-green } Account Security
 
-Tuta supports [two factor authentication](https://tuta.com/faq#2fa) with either TOTP or U2F.
+Tuta supports [two factor authentication](https://tuta.com/support#2fa) with either TOTP or U2F.
 
 #### :material-check:{ .pg-green } Data Security
 
-Tuta has [zero access encryption at rest](https://tuta.com/faq#what-encrypted) for your emails, [address book contacts](https://tuta.com/faq#encrypted-address-book), and [calendars](https://tuta.com/faq#calendar). This means the messages and other data stored in your account are only readable by you.
+Tuta has [zero access encryption at rest](https://tuta.com/support#what-encrypted) for your emails, [address book contacts](https://tuta.com/support#encrypted-address-book), and [calendars](https://tuta.com/support#calendar). This means the messages and other data stored in your account are only readable by you.
 
 #### :material-information-outline:{ .pg-blue } Email Encryption
 
@@ -228,13 +239,11 @@ Tuta [does not use OpenPGP](https://tuta.com/support/#pgp). Tuta accounts can on
 
 #### :material-information-outline:{ .pg-blue } Account Termination
 
-Tuta will [delete inactive free accounts](https://tuta.com/faq#inactive-accounts) after six months. You can reuse a deactivated free account if you pay.
+Tuta will [delete inactive free accounts](https://tuta.com/support#inactive-accounts) after six months. You can reuse a deactivated free account if you pay.
 
 #### :material-information-outline:{ .pg-blue } Additional Functionality
 
-Tuta offers the business version of [Tuta to non-profit organizations](https://tuta.com/blog/posts/secure-email-for-non-profit) for free or with a heavy discount.
-
-Tuta also has a business feature called [Secure Connect](https://tuta.com/secure-connect). This ensures customer contact to the business uses E2EE. The feature costs €240/y.
+Tuta offers the business version of [Tuta to non-profit organizations](https://tuta.com/blog/secure-email-for-non-profit) for free or with a heavy discount.
 
 Tuta doesn't offer a digital legacy feature.
 
@@ -248,12 +257,12 @@ Advanced system administrators may consider setting up their own email server. M
 
 ![Mailcow logo](assets/img/email/mailcow.svg){ align=right }
 
-**Mailcow** is a more advanced mail server perfect for those with a bit more Linux experience. It has everything you need in a Docker container: A mail server with DKIM support, antivirus and spam monitoring, webmail and ActiveSync with SOGo, and web-based administration with 2FA support.
+**Mailcow** is a more advanced mail server perfect for those with a bit more Linux experience. It has everything you need in a Docker container: a mail server with DKIM support, antivirus and spam monitoring, webmail and ActiveSync with SOGo, and web-based administration with 2FA support.
 
 [:octicons-home-16: Homepage](https://mailcow.email){ .md-button .md-button--primary }
-[:octicons-info-16:](https://docs.mailcow.email){ .card-link title=Documentation}
+[:octicons-info-16:](https://docs.mailcow.email){ .card-link title="Documentation" }
 [:octicons-code-16:](https://github.com/mailcow/mailcow-dockerized){ .card-link title="Source Code" }
-[:octicons-heart-16:](https://servercow.de/mailcow?lang=en#sal){ .card-link title=Contribute }
+[:octicons-heart-16:](https://servercow.de/mailcow?lang=en#sal){ .card-link title="Contribute" }
 
 </div>
 
@@ -264,7 +273,7 @@ Advanced system administrators may consider setting up their own email server. M
 **Mail-in-a-Box** is an automated setup script for deploying a mail server on Ubuntu. Its goal is to make it easier for people to set up their own mail server.
 
 [:octicons-home-16: Homepage](https://mailinabox.email){ .md-button .md-button--primary }
-[:octicons-info-16:](https://mailinabox.email/guide.html){ .card-link title=Documentation}
+[:octicons-info-16:](https://mailinabox.email/guide.html){ .card-link title="Documentation" }
 [:octicons-code-16:](https://github.com/mail-in-a-box/mailinabox){ .card-link title="Source Code" }
 
 </div>
@@ -276,7 +285,7 @@ For a more manual approach we've picked out these two articles:
 
 ## Criteria
 
-**Please note we are not affiliated with any of the providers we recommend.** In addition to [our standard criteria](about/criteria.md), we have developed a clear set of requirements for any Email provider wishing to be recommended, including implementing industry best practices, modern technology and more. We suggest you familiarize yourself with this list before choosing an Email provider, and conduct your own research to ensure the Email provider you choose is the right choice for you.
+**Please note we are not affiliated with any of the providers we recommend.** In addition to [our standard criteria](about/criteria.md), we have developed a clear set of requirements for any email provider wishing to be recommended, including implementing industry best practices, modern technology and more. We suggest you familiarize yourself with this list before choosing an email provider, and conduct your own research to ensure the email provider you choose is the right choice for you.
 
 ### Technology
 
@@ -298,8 +307,8 @@ We regard these features as important in order to provide a safe and optimal ser
 - Support for a temporary mailbox for external users. This is useful when you want to send an encrypted email, without sending an actual copy to your recipient. These emails usually have a limited lifespan and then are automatically deleted. They also don't require the recipient to configure any cryptography like OpenPGP.
 - Availability of the email provider's services via an [onion service](https://en.wikipedia.org/wiki/.onion).
 - [Sub-addressing](https://en.wikipedia.org/wiki/Email_address#Sub-addressing) support.
-- Catch-all or alias functionality for those who own their own domains.
-- Use of standard email access protocols such as IMAP, SMTP or [JMAP](https://en.wikipedia.org/wiki/JSON_Meta_Application_Protocol). Standard access protocols ensure customers can easily download all of their email, should they want to switch to another provider.
+- Catch-all or alias functionality for those who use their own domains.
+- Use of standard email access protocols such as IMAP, SMTP, or [JMAP](https://en.wikipedia.org/wiki/JSON_Meta_Application_Protocol). Standard access protocols ensure customers can easily download all of their email, should they want to switch to another provider.
 
 ### Privacy
 
@@ -307,7 +316,7 @@ We prefer our recommended providers to collect as little data as possible.
 
 **Minimum to Qualify:**
 
-- Protect sender's IP address. Filter it from showing in the `Received` header field.
+- Protect sender's IP address, which can involve filtering it from showing in the `Received` header field.
 - Don't require personally identifiable information (PII) besides a username and a password.
 - Privacy policy that meets the requirements defined by the GDPR.
 
@@ -318,12 +327,12 @@ We prefer our recommended providers to collect as little data as possible.
 
 ### Security
 
-Email servers deal with a lot of very sensitive data. We expect that providers will adopt best industry practices in order to protect their members.
+Email servers deal with a lot of very sensitive data. We expect that providers will adopt best industry practices in order to protect their customers.
 
 **Minimum to Qualify:**
 
 - Protection of webmail with 2FA, such as TOTP.
-- Zero access encryption, builds on encryption at rest. The provider does not have the decryption keys to the data they hold. This prevents a rogue employee leaking data they have access to or remote adversary from releasing data they have stolen by gaining unauthorized access to the server.
+- Zero access encryption, which builds on encryption at rest. The provider does not have the decryption keys to the data they hold. This prevents a rogue employee leaking data they have access to or remote adversary from releasing data they have stolen by gaining unauthorized access to the server.
 - [DNSSEC](https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions) support.
 - No TLS errors or vulnerabilities when being profiled by tools such as [Hardenize](https://hardenize.com), [testssl.sh](https://testssl.sh), or [Qualys SSL Labs](https://ssllabs.com/ssltest); this includes certificate related errors and weak DH parameters, such as those that led to [Logjam](https://en.wikipedia.org/wiki/Logjam_(computer_security)).
 - A server suite preference (optional on TLSv1.3) for strong cipher suites which support forward secrecy and authenticated encryption.
@@ -336,13 +345,14 @@ Email servers deal with a lot of very sensitive data. We expect that providers w
 - Website security standards such as:
     - [HTTP Strict Transport Security](https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security)
     - [Subresource Integrity](https://en.wikipedia.org/wiki/Subresource_Integrity) if loading things from external domains.
-- Must support viewing of [Message headers](https://en.wikipedia.org/wiki/Email#Message_header), as it is a crucial forensic feature to determine if an email is a phishing attempt.
+- Must support viewing of [message headers](https://en.wikipedia.org/wiki/Email#Message_header), as it is a crucial forensic feature to determine if an email is a phishing attempt.
 
 **Best Case:**
 
-- Support for hardware authentication, i.e. U2F and [WebAuthn](https://en.wikipedia.org/wiki/WebAuthn). U2F and WebAuthn are more secure as they use a private key stored on a client-side hardware device to authenticate people, as opposed to a shared secret that is stored on the web server and on the client side when using TOTP. Furthermore, U2F and WebAuthn are more resistant to phishing as their authentication response is based on the authenticated [domain name](https://en.wikipedia.org/wiki/Domain_name).
+- Support for hardware authentication, i.e. U2F and [WebAuthn](basics/multi-factor-authentication.md#fido-fast-identity-online).
 - [DNS Certification Authority Authorization (CAA) Resource Record](https://tools.ietf.org/html/rfc6844) in addition to DANE support.
-- Implementation of [Authenticated Received Chain (ARC)](https://en.wikipedia.org/wiki/Authenticated_Received_Chain), this is useful for people who post to mailing lists [RFC8617](https://tools.ietf.org/html/rfc8617).
+- Implementation of [Authenticated Received Chain (ARC)](https://en.wikipedia.org/wiki/Authenticated_Received_Chain), which is useful for people who post to mailing lists [RFC8617](https://tools.ietf.org/html/rfc8617).
+- Published security audits from a reputable third-party firm.
 - Bug-bounty programs and/or a coordinated vulnerability-disclosure process.
 - Website security standards such as:
     - [Content Security Policy (CSP)](https://en.wikipedia.org/wiki/Content_Security_Policy)
@@ -358,28 +368,27 @@ You wouldn't trust your finances to someone with a fake identity, so why trust t
 
 **Best Case:**
 
-- Public-facing leadership.
 - Frequent transparency reports.
 
 ### Marketing
 
-With the email providers we recommend we like to see responsible marketing.
+With the email providers we recommend, we like to see responsible marketing.
 
 **Minimum to Qualify:**
 
-- Must self-host analytics (no Google Analytics, Adobe Analytics, etc.). The provider's site must also comply with [DNT (Do Not Track)](https://en.wikipedia.org/wiki/Do_Not_Track) for those who wish to opt-out.
+- Must self-host analytics (no Google Analytics, Adobe Analytics, etc.). The provider's site must also comply with [DNT (Do Not Track)](https://en.wikipedia.org/wiki/Do_Not_Track) for those who wish to opt out.
 
-Must not have any marketing which is irresponsible:
+Must not have any irresponsible marketing, which can include the following:
 
 - Claims of "unbreakable encryption." Encryption should be used with the intention that it may not be secret in the future when the technology exists to crack it.
-- Making guarantees of protecting anonymity 100%. When someone makes a claim that something is 100% it means there is no certainty for failure. We know people can quite easily deanonymize themselves in a number of ways, e.g.:
+- Making guarantees of protecting anonymity 100%. When someone makes a claim that something is 100% it means there is no certainty for failure. We know people can quite easily de-anonymize themselves in a number of ways, e.g.:
 
     - Reusing personal information e.g. (email accounts, unique pseudonyms, etc.) that they accessed without anonymity software (Tor, VPN, etc.)
     - [Browser fingerprinting](https://en.wikipedia.org/wiki/Device_fingerprint#Browser_fingerprint)
 
 **Best Case:**
 
-- Clear and easy to read documentation. This includes things like, setting up 2FA, email clients, OpenPGP, etc.
+- Clear and easy to read documentation for tasks like setting up 2FA, email clients, OpenPGP, etc.
 
 ### Additional Functionality
 
